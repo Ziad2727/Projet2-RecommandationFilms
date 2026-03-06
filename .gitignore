@@ -3,7 +3,8 @@
 *.tsv
 *.gz
 *.zip
-*.parquet
+# mais garder le fichier utilisateurs
+!app/users.csv
 
 # data brute
 data/raw/
