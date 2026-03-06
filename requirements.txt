@@ -8,5 +8,4 @@ deep-translator>=1.11.0
 fastapi>=0.109.0
 uvicorn>=0.27.0
 requests>=2.31.0
-time
-tqdm
+tqdm>=4.66.0
