@@ -5,7 +5,8 @@
 
 # Cine Creusois - Popcorn Analytics
 
-Application de catalogue et de recommandation de films pour le Cinema Creusois, developpee avec Streamlit et FastAPI.
+Application de catalogue et de recommandation de films pour le Cinema Creusois, developpee avec Streamlit et FastAPI :
+https://projet2-recommandationfilms-creuse-groupejaune.streamlit.app/ 
 
 ---
 
