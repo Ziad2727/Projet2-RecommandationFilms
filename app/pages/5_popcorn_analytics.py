@@ -237,7 +237,7 @@ st.markdown("""
         <li>Profil démographique de la Creuse et habitudes de fréquentation cinéma</li>
         <li>Analyse des tendances de consommation (genres, périodes, origines des films)</li>
         <li>Benchmark avec les cinémas indépendants en zone rurale</li>
-        <li>Définition des critères de filtrage pour constituer un catalogue adapté</li>
+        <li>Définition des critères de filtrage pour constituer un catalogue adapté : films avec titres français, de 1950 à 2025, durée entre 60min et 180min, note minimale 6.0, si durée > 120min note minimale 8.0, genres adaptés au grand public : exclusion de "sport", "horreur", "téléfilm", "actualités" seuils de vote en fonction de la zone de production. </li>
     </ul>
     <p style="margin-top:14px;">
         <a href="https://my.visme.co/view/33pggggx-analyse-de-marche" target="_blank"
