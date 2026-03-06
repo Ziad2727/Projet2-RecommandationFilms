@@ -2,6 +2,13 @@
    CYBERPUNK NEON PINK – ULTRA FUTURISTIC
    ========================================= */
 
+html,
+body,
+.stApp {
+    background: #050505;
+}
+
+
 :root {
     --black-main: #050508;
     --black-soft: #0a0a12;
