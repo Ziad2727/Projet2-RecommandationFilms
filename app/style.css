@@ -1,0 +1,430 @@
+/* =========================================
+   CYBERPUNK NEON PINK – ULTRA FUTURISTIC
+   ========================================= */
+
+:root {
+    --black-main: #050508;
+    --black-soft: #0a0a12;
+    --black-card: #0d0d18;
+    --black-card-hover: #111125;
+    --pink-neon: #ff2d78;
+    --pink-accent: #febfda;
+    --pink-soft: #fb95c4;
+    --pink-glow: #ff2d78;
+    --pink-deep: #c9184a;
+    --purple-accent: #b24dff;
+    --text-main: #f0e6f6;
+    --text-muted: #a89bb5;
+}
+
+
+.top-logo-center {
+    text-align: right;
+}
+
+.top-logo-center img {
+    max-width: 300px;
+}
+
+/* =========================================
+   GLOBAL BACKGROUND
+   ========================================= */
+.stApp,
+[data-testid="stAppViewContainer"],
+.block-container {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)) !important;
+}
+
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+[data-testid="stSidebar"] {
+    background: rgba(0, 0, 0, 0.35) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 45, 120, 0.25) !important;
+}
+
+/* =========================================
+   TITLES
+   ========================================= */
+h1 {
+    font-size: 2.6rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pink-accent) !important;
+    text-shadow: 0 0 10px rgba(255, 45, 120, 0.5), 0 0 30px rgba(255, 45, 120, 0.3);
+}
+
+h2,
+h3 {
+    font-weight: 700 !important;
+    color: var(--pink-accent) !important;
+}
+
+/* =========================================
+   TEXT
+   ========================================= */
+p,
+span,
+label,
+div {
+    color: var(--text-main) !important;
+}
+
+small {
+    color: var(--text-muted) !important;
+}
+
+/* =========================================
+   BUTTONS – SUBTLE DEFAULT, FLASHY ON HOVER
+   ========================================= */
+.stButton>button {
+    background: rgba(13, 13, 24, 0.8) !important;
+    color: #a89bb5 !important;
+    border: 1px solid rgba(255, 45, 120, 0.2) !important;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.stButton>button:hover {
+    background: linear-gradient(135deg,
+            var(--pink-neon) 0%, var(--pink-deep) 50%, var(--purple-accent) 100%) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 45, 120, 0.5) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 45, 120, 0.5), 0 0 30px rgba(255, 45, 120, 0.2);
+}
+
+/* =========================================
+   INPUTS
+   ========================================= */
+input,
+textarea,
+select {
+    background-color: rgba(13, 13, 24, 0.9) !important;
+    color: var(--text-main) !important;
+    border: 1px solid rgba(255, 45, 120, 0.2) !important;
+    border-radius: 6px;
+}
+
+input:focus {
+    border-color: var(--pink-neon) !important;
+    box-shadow: 0 0 0 2px rgba(255, 45, 120, 0.2);
+}
+
+/* =========================================
+   CARDS / CONTAINERS
+   ========================================= */
+.stContainer {
+    background: linear-gradient(145deg, rgba(13, 13, 24, 0.95), rgba(16, 8, 24, 0.9)) !important;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid rgba(255, 45, 120, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stContainer:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 45, 120, 0.4);
+    border-color: rgba(255, 45, 120, 0.5);
+}
+
+/* =========================================
+   POSTER WITH SYNOPSIS OVERLAY
+   ========================================= */
+.poster-hover-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.poster-hover-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+/* Glow on hover */
+.poster-hover-wrap:hover {
+    box-shadow:
+        0 0 14px rgba(255, 45, 120, 0.55),
+        0 0 35px rgba(255, 45, 120, 0.3),
+        0 0 60px rgba(255, 45, 120, 0.12);
+    transform: scale(1.03);
+}
+
+/* Darken image on hover */
+.poster-hover-wrap:hover img {
+    filter: brightness(0.2);
+}
+
+/* Synopsis overlay */
+.poster-synopsis-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.poster-hover-wrap:hover .poster-synopsis-overlay {
+    opacity: 1;
+}
+
+.poster-synopsis-text {
+    color: #e8ddf0 !important;
+    font-size: 0.70rem;
+    line-height: 1.45;
+    text-align: center;
+    font-weight: 350;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    max-height: 90%;
+}
+
+/* films suggerés posters (suggestions 5 cols) */
+.poster-hover-wrap.poster-sm .poster-synopsis-text {
+    font-size: 0.84rem;
+    line-height: 1.35;
+    overflow-y: auto;
+    max-height: 90%;
+}
+
+/* =========================================
+   EXPANDERS – DEEP BLACK GLOSSY + ANIMATION
+   ========================================= */
+@keyframes glossy-sweep {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+div[data-testid="stExpander"] {
+    background: linear-gradient(145deg, #020204 0%, #08080f 40%, #0c0c16 60%, #050509 100%) !important;
+    border: 1px solid rgba(255, 45, 120, 0.12) !important;
+    border-radius: 10px !important;
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+div[data-testid="stExpander"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.04) 55%, transparent 70%);
+    background-size: 200% 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+div[data-testid="stExpander"]:hover {
+    border-color: rgba(255, 45, 120, 0.4) !important;
+    box-shadow: 0 0 12px rgba(255, 45, 120, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+div[data-testid="stExpander"]:hover::before {
+    opacity: 1;
+    animation: glossy-sweep 1.2s ease forwards;
+}
+
+div[data-testid="stExpander"][open] {
+    border-color: rgba(255, 45, 120, 0.45) !important;
+    box-shadow: 0 0 18px rgba(255, 45, 120, 0.2), inset 0 0 30px rgba(255, 45, 120, 0.03);
+}
+
+div[data-testid="stExpander"] summary {
+    color: #a89bb5 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 10px 16px !important;
+    transition: color 0.25s ease;
+    position: relative;
+    z-index: 2;
+}
+
+div[data-testid="stExpander"] summary:hover {
+    color: #febfda !important;
+}
+
+div[data-testid="stExpander"][open] summary {
+    color: #febfda !important;
+    text-shadow: 0 0 8px rgba(255, 45, 120, 0.3);
+}
+
+div[data-testid="stExpander"] summary svg {
+    color: rgba(255, 45, 120, 0.5) !important;
+    transition: all 0.3s ease;
+}
+
+div[data-testid="stExpander"]:hover summary svg,
+div[data-testid="stExpander"][open] summary svg {
+    color: #ff2d78 !important;
+    filter: drop-shadow(0 0 4px rgba(255, 45, 120, 0.4));
+}
+
+div[data-testid="stExpander"] [data-testid="stExpanderDetails"] {
+    padding: 8px 16px 14px 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   MULTISELECT & SLIDER INSIDE EXPANDERS
+   ========================================= */
+div[data-testid="stExpander"] [data-testid="stMultiSelect"] {
+    margin-bottom: 8px;
+}
+
+div[data-testid="stExpander"] [data-baseweb="select"] {
+    background-color: rgba(8, 8, 16, 0.95) !important;
+    border-color: rgba(255, 45, 120, 0.15) !important;
+    border-radius: 6px;
+}
+
+div[data-testid="stExpander"] [data-baseweb="tag"] {
+    background-color: rgba(255, 45, 120, 0.15) !important;
+    border: 1px solid rgba(255, 45, 120, 0.3) !important;
+    color: #febfda !important;
+}
+
+/* =========================================
+   COMPACT MOVIE CARD BUTTONS
+   ========================================= */
+[data-testid="stVerticalBlock"] [data-testid="stHorizontalBlock"] .stButton>button {
+    padding: 4px 8px !important;
+    min-height: 28px !important;
+    font-size: 0.7rem !important;
+}
+
+/* =========================================
+   LINKS
+   ========================================= */
+a {
+    color: var(--pink-soft) !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--pink-neon) !important;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--pink-neon), var(--purple-accent));
+    border-radius: 10px;
+}
+
+/* =========================================
+   HIDE STREAMLIT DEFAULTS
+   ========================================= */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* =========================================
+   NEON SEPARATOR
+   ========================================= */
+.neon-sep {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 45, 120, 0.3) 20%, rgba(255, 45, 120, 0.5) 50%, rgba(255, 45, 120, 0.3) 80%, transparent 100%);
+    margin: 14px 0 18px 0;
+    border: none;
+}
+
+/* =========================================
+   FILTER COUNT
+   ========================================= */
+.filter-count {
+    font-size: 0.82rem;
+    color: #a89bb5 !important;
+    padding: 6px 0 0 2px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* =========================================
+   PAGE TITLE / SUBTITLE
+   ========================================= */
+.page-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #febfda !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(255, 45, 120, 0.35);
+    margin: 10px 0 4px 0;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a89bb5 !important;
+    margin: 0 0 8px 0;
+}
+
+/* =========================================
+   FILM COUNT BANNER
+   ========================================= */
+.film-count {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #a89bb5 !important;
+    padding: 8px 0 4px 0;
+    font-weight: 500;
+}
+
+/* =========================================
+   ALIGN CARD BUTTONS – fixed info height
+   ========================================= */
+[data-testid="stColumn"]>[data-testid="stVerticalBlock"] {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

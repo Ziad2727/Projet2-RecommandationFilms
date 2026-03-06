@@ -1,0 +1,20 @@
+# datasets
+*.csv
+*.tsv
+*.gz
+*.zip
+*.parquet
+
+# data brute
+data/raw/
+
+# caches python
+__pycache__/
+.ipynb_checkpoints/
+
+# streamlit cache
+.streamlit/
+
+# fichiers système
+desktop.ini
+.DS_Store
