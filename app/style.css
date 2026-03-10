@@ -435,3 +435,54 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/* ── DROPDOWNS / SELECT ── */
+[data-baseweb="select"] > div,
+[data-baseweb="select"] [data-baseweb="popover"],
+[data-baseweb="base-input"] {
+    background-color: rgba(8, 8, 16, 0.95) !important;
+    border-color: rgba(255, 45, 120, 0.2) !important;
+    color: #f0e6f6 !important;
+}
+
+[data-baseweb="select"] span,
+[data-baseweb="select"] div {
+    background-color: transparent !important;
+    color: #f0e6f6 !important;
+}
+
+/* ── SLIDER ── */
+[data-testid="stSlider"] [data-baseweb="slider"] div {
+    background: rgba(8, 8, 16, 0.95) !important;
+}
+
+[data-testid="stSlider"] [role="slider"] {
+    background: var(--pink-neon) !important;
+    border-color: var(--pink-neon) !important;
+}
+
+/* ── INPUT TEXT ── */
+[data-testid="stTextInput"] input,
+[data-baseweb="input"] input {
+    background-color: rgba(8, 8, 16, 0.95) !important;
+    color: #f0e6f6 !important;
+    border-color: rgba(255, 45, 120, 0.2) !important;
+}
+
+/* ── DROPDOWN MENU OPTIONS ── */
+[data-baseweb="menu"] {
+    background-color: #0a0a12 !important;
+    border: 1px solid rgba(255, 45, 120, 0.2) !important;
+}
+
+[data-baseweb="menu"] li {
+    background-color: #0a0a12 !important;
+    color: #f0e6f6 !important;
+}
+
+[data-baseweb="menu"] li:hover {
+    background-color: rgba(255, 45, 120, 0.15) !important;
+    color: #febfda !important;
+}
+
